@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+        <a href="{{ site.baseurl }}/wiki" class="btn">Wiki</a>
+        <a href="{{ site.baseurl }}/python_notes/" class="btn">Notes</a>
+    </section>
+
+    <section class="main-content">
+      {{ content }}
+
+      <footer class="site-footer">
+        {% if site.footer %}
+          <span class="site-footer-credits">{{site.footer}}</span>
+        {% endif %}        
+      </footer>
+    </section>
+  </body>
+</html>
